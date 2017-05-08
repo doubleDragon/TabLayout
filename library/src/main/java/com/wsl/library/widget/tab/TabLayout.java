@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,18 +66,10 @@ public class TabLayout extends LinearLayout implements View.OnClickListener {
         this.mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                View leftView;
-                View rightView;
-
                 if (positionOffset > 0) {
-                    leftView = mViewPager.getChildAt(position);
-                    rightView = mViewPager.getChildAt(position + 1);
-                    leftView.setAlpha(1 - positionOffset);
-                    rightView.setAlpha(positionOffset);
                     mTabItems.get(position).setTabAlpha(1 - positionOffset);
                     mTabItems.get(position + 1).setTabAlpha(positionOffset);
                 } else {
-                    mViewPager.getChildAt(position).setAlpha(1);
                     mTabItems.get(position).setTabAlpha(1 - positionOffset);
                 }
                 if (mOnPageChangeListener != null) {

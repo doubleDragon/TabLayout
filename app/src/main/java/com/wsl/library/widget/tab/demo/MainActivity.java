@@ -15,9 +15,9 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
 
-    private String[] mTitle = {"微信", "通讯录", "发现", "我"};
-    private int[] mIconSelect = {R.drawable.ic_account_circle_black_24dp, R.drawable.ic_alarm_on_black_24dp, R.drawable.ic_account_circle_black_24dp, R.drawable.ic_account_circle_black_24dp};
-    private int[] mIconNormal = {R.drawable.ic_account_circle_white_24dp, R.drawable.ic_alarm_on_white_24dp, R.drawable.ic_account_circle_white_24dp, R.drawable.ic_account_circle_white_24dp};
+    private String[] mTitle = {"微信", "通讯录"};
+    private int[] mIconSelect = {R.drawable.ic_account_circle_black_24dp, R.drawable.ic_alarm_on_black_24dp};
+    private int[] mIconNormal = {R.drawable.ic_account_circle_white_24dp, R.drawable.ic_alarm_on_white_24dp};
     private ViewPager mViewPager ;
     private TabLayout mTabView ;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mViewPager = (ViewPager)findViewById(R.id.id_view_pager) ;
-        mViewPager.setOffscreenPageLimit(4);
+//        mViewPager.setOffscreenPageLimit(4);
         mViewPager.setAdapter(new PageAdapter(getSupportFragmentManager()));
         mTabView = (TabLayout)findViewById(R.id.id_tab) ;
         mTabView.setViewPager(mViewPager);
