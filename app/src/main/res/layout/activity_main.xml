@@ -17,7 +17,7 @@
     <com.wsl.library.widget.tab.TabLayout
         android:id="@+id/id_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
         android:background="#eeeeee"
         app:text_size="12sp"

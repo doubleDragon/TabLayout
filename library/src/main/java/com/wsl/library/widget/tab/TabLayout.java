@@ -106,7 +106,7 @@ public class TabLayout extends LinearLayout implements View.OnClickListener {
     private void initItem() {
         for (int i = 0; i < mChildSize; i++) {
             TabView tabItem = new TabView(getContext());
-            LayoutParams params = new LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+            LayoutParams params = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1);
             tabItem.setPadding(mPadding, mPadding, mPadding, mPadding);
             tabItem.setIconText(mListener.onIconSelect(i), mListener.onTextSelect(i));
             tabItem.setTextSize(mTextSize);
